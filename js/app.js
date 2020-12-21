@@ -1,12 +1,20 @@
-import Vue from '../web_modules/vue/dist/vue.esm.browser.js'
-import VueRouter from '../web_modules/vue-router/dist/vue-router.esm.browser.js'
 import router from './router/index.js'
 
-Vue.use(VueRouter);
+import titleMixin from './mixins/titleMixin.js'
 
-const App = new Vue({
-  router: router,
-  el: '#app'
+Vue.mixin(titleMixin)
+
+new window.Vue({
+  router,
+  el: '#app',
+  vuetify: new Vuetify(),
+
+  components: {
+    'app-world': window.httpVueLoader('js/components/AppWorld.vue'),
+    'app-navigation': window.httpVueLoader('js/components/layout/AppNavigation.vue')
+  },
+
+  data: () => ({
+    drawer: null
+  })
 })
-
-export default App;

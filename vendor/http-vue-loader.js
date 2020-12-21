@@ -1,13 +1,12 @@
-var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-var httpVueLoader = createCommonjsModule(function (module, exports) {
 (function umd(root,factory){
-	module.exports=factory();
-})(commonjsGlobal,function factory() {
+	if(typeof module==='object' && typeof exports === 'object' )
+		module.exports=factory()
+	else if(typeof define==='function' && define.amd)
+		define([],factory)
+	else
+		root.httpVueLoader=factory()
+})(this,function factory() {
+	'use strict';
 
 	var scopeIndex = 0;
 
@@ -477,6 +476,3 @@ var httpVueLoader = createCommonjsModule(function (module, exports) {
 
 	return httpVueLoader;
 });
-});
-
-export default httpVueLoader;

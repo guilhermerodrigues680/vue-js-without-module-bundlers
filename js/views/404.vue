@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>Pagina nao encontrada</p>
-    <p>A página {{pathNaoEncontrado}} não existe. :/</p>
+    <p>A página que você procura não existe. :/</p>
   </div>
 </template>
 

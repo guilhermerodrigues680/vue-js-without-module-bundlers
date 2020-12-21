@@ -1,6 +1,3 @@
-import VueRouter from '../../web_modules/vue-router/dist/vue-router.esm.browser.js'
-import httpVueLoader from '../../web_modules/http-vue-loader/src/httpVueLoader.js'
-
 // const pageEx = { template: '<div>Ex</div>' }
 
 const routes = [
@@ -11,6 +8,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+    // mode: 'history',
     routes: routes
 })
 
