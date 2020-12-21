@@ -1,12 +1,12 @@
 import Vue from '../web_modules/vue/dist/vue.esm.browser.js'
-import httpVueLoader from '../web_modules/http-vue-loader/src/httpVueLoader.js'
+import VueRouter from '../web_modules/vue-router/dist/vue-router.esm.browser.js'
+import router from './router/index.js'
+
+Vue.use(VueRouter);
 
 const App = new Vue({
-  el: '#app',
-
-  components: {
-    'app-world': httpVueLoader('./js/components/AppWorld.vue')
-  },
+  router: router,
+  el: '#app'
 })
 
 export default App;

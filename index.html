@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello World</title>
+  <title>Static HTML With Vue.js Single File Component</title>
   <script type="module" src="./js/app.js"></script>
 </head>
 
 <body>
-  <h1>Static HTML With Vue.js Single File Component</h1>
-
   <div id="app">
-    <span>Hello</span>
-    <app-world></app-world>
+    <div>
+      <router-link to="/">Home</router-link>
+      <router-link to="/foo1">Go to Foo1</router-link>
+      <router-link to="/bar1">Go to Bar1</router-link>
+      <router-link to="/ola-mundo">Ola mundo</router-link>
+    </div>
+
+    <router-view></router-view>
   </div>
 </body>
 </html>

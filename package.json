@@ -14,12 +14,14 @@
   "dependencies": {
     "http-vue-loader": "^1.4.2",
     "serve": "^11.3.2",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9"
   },
   "@pika/web": {
     "webDependencies": [
       "vue/dist/vue.esm.browser.js",
-      "http-vue-loader/src/httpVueLoader.js"
+      "http-vue-loader/src/httpVueLoader.js",
+      "vue-router/dist/vue-router.esm.browser.js"
     ]
   }
 }
